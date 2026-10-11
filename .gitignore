@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+
+# Frontend build and dependencies
+node_modules/
+dist/
+dist-ssr/
+
+# Vercel
+.vercel/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
