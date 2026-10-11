@@ -26,7 +26,7 @@ The application is deployed with Vercel (frontend), Render (backend), and Neon P
 ![Interview reports](docs/screenshots/reports.png)
 
 ### Report overview
-![Interview report overview](docs/screenshots/reports-details.png)
+![Interview report overview](docs/screenshots/analytics.png)
 
 ## Features
 
