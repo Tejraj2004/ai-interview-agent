@@ -1,79 +1,44 @@
 # InterviewAI — AI-Powered Interview Preparation Platform
 
-
-
 InterviewAI is a full-stack web application that helps candidates prepare for technical interviews using job-specific questions and AI-powered feedback. Users can analyze a job description, generate a personalized interview, submit answers, and review performance reports.
 
+## Live Demo
+- **Frontend:**** https://ai-interview-agent-gamma-mauve.vercel.app
 
+- **Backend API:**** https://ai-interview-agent-epbo.onrender.com
 
-## Live Demo**
+- **API documentation:**** https://ai-interview-agent-epbo.onrender.com/docs
 
-
-
-- **\*\*Frontend:\*\*** https://ai-interview-agent-gamma-mauve.vercel.app
-
-- **\*\*Backend API:\*\*** https://ai-interview-agent-epbo.onrender.com
-
-- **\*\*API documentation:\*\*** https://ai-interview-agent-epbo.onrender.com/docs
-
-- **\*\*GitHub:\*\*** https://github.com/Tejraj2004/ai-interview-agent
-
-
+- **GitHub:**** https://github.com/Tejraj2004/ai-interview-agent
 
 The application is deployed with Vercel (frontend), Render (backend), and Neon PostgreSQL (database). AI features use the Groq API through LangChain.
 
-
-
-## Screenshots**
-
-
-
-### Dashboard**
-
+## Screenshots
+### Dashboard
 ![InterviewAI dashboard](docs/screenshots/dashboard.png)
 
-
-
-### My Interviews**
-
+### My Interviews
 ![My Interviews page](docs/screenshots/my-interviews.png)
 
-
-
-### Job Description Analysis**
-
+### Job Description Analysis
 ![Job Descriptions page](docs/screenshots/job-descriptions.png)
 
-
-
-### Interview Reports**
-
+### Interview Reports
 ![Interview reports](docs/screenshots/reports.png)
 
-
-
-### Analytics**
-
+### Analytics
 ![Interview report overview](docs/screenshots/analytics.png)
 
-### Interview Session**
-
+### Interview Session
 ![Interview session](docs/screenshots/interview-session.png)
 
-### Answer Evaluation**
-
+### Answer Evaluation
 ![AI answer evaluation](docs/screenshots/answer-evaluation.png)
 
-### Interview Reports Overview**
-
+### Interview Reports Overview
 ![Interview reports overview](docs/screenshots/interview-reports.png)
 
-
-
-## Features**
-
-
-
+## Features
 - User registration and login with token-based authentication.
 
 - AI-assisted job description analysis.
@@ -92,12 +57,7 @@ The application is deployed with Vercel (frontend), Render (backend), and Neon P
 
 - PostgreSQL persistence for users, job descriptions, interviews, questions, answers, and reports.
 
-
-
-## Technology Stack**
-
-
-
+## Technology Stack
 | Layer | Technologies |
 
 |---|---|
@@ -116,12 +76,7 @@ The application is deployed with Vercel (frontend), Render (backend), and Neon P
 
 | Version control | Git, GitHub |
 
-
-
-## Architecture**
-
-
-
+## Architecture
 ```text
 
 Candidate
@@ -158,12 +113,7 @@ FastAPI backend (Render)
 
 ```
 
-
-
-## Application Workflow**
-
-
-
+## Application Workflow
 1. Register or log in.
 
 2. Enter a job title, company, and job description.
@@ -180,15 +130,8 @@ FastAPI backend (Render)
 
 8. Return to saved interviews to continue a session.
 
-
-
-## Repository Structure**
-
-
-
+## Repository Structure
 The repository is split into `backend/` and `frontend/`. This tree documents the main application areas based on the current project setup. Verify exact filenames against your checkout before treating every listed path as exhaustive.
-
-
 
 ```text
 
@@ -292,20 +235,10 @@ ai-interview-agent/
 
 ```
 
+**Important:**** Keep only paths that actually exist in your checkout. For example, if your models are split into a `models/` package instead of `models.py`, reflect that in the tree. Local `.env` files, virtual environments, `node_modules/`, and build output should not be committed.
 
-
-**\*\*Important:\*\*** Keep only paths that actually exist in your checkout. For example, if your models are split into a `models/` package instead of `models.py`, reflect that in the tree. Local `.env` files, virtual environments, `node_modules/`, and build output should not be committed.
-
-
-
-## Local Setup**
-
-
-
-### Prerequisites**
-
-
-
+## Local Setup
+### Prerequisites
 - Python version supported by `backend/requirements.txt`
 
 - Node.js and npm
@@ -314,12 +247,7 @@ ai-interview-agent/
 
 - Groq API key
 
-
-
-### 1. Clone the repository**
-
-
-
+### 1. Clone the repository
 ```powershell
 
 git clone https://github.com/Tejraj2004/ai-interview-agent.git
@@ -328,12 +256,7 @@ cd ai-interview-agent
 
 ```
 
-
-
-### 2. Set up the backend**
-
-
-
+### 2. Set up the backend
 ```powershell
 
 cd backend
@@ -348,11 +271,7 @@ pip install -r requirements.txt
 
 ```
 
-
-
 Create `backend/.env` with the variable names required by `app/config.py`. Typical values look like:
-
-
 
 ```dotenv
 
@@ -370,19 +289,10 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 ```
 
-
-
 Use the exact variable names and model value expected by your code. Never commit `.env` or share credentials. For local PostgreSQL, use your local connection string.
 
-
-
-### 3. Run the backend**
-
-
-
+### 3. Run the backend
 From the backend directory:
-
-
 
 ```powershell
 
@@ -392,11 +302,7 @@ python -m uvicorn app.main:app --reload
 
 ```
 
-
-
 Useful URLs:
-
-
 
 - API root: http://127.0.0.1:8000/
 
@@ -406,15 +312,8 @@ Useful URLs:
 
 - Swagger API docs: http://127.0.0.1:8000/docs
 
-
-
-### 4. Set up and run the frontend**
-
-
-
+### 4. Set up and run the frontend
 Open another terminal:
-
-
 
 ```powershell
 
@@ -424,11 +323,7 @@ npm install
 
 ```
 
-
-
 Create `frontend/.env`:
-
-
 
 ```dotenv
 
@@ -436,11 +331,7 @@ VITE_API_BASE_URL=http://127.0.0.1:8000
 
 ```
 
-
-
 Start Vite:
-
-
 
 ```powershell
 
@@ -448,20 +339,10 @@ npm run dev
 
 ```
 
-
-
 Open http://localhost:5173. The API helper should read `import.meta.env.VITE_API_BASE_URL`. Restart Vite after changing environment variables.
 
-
-
-## Important Commands**
-
-
-
-### Backend (PowerShell)**
-
-
-
+## Important Commands
+### Backend (PowerShell)
 ```powershell
 
 cd D:\ai-interview-agent\backend
@@ -478,12 +359,7 @@ pip list
 
 ```
 
-
-
-### Frontend (PowerShell)**
-
-
-
+### Frontend (PowerShell)
 ```powershell
 
 cd D:\ai-interview-agent\frontend
@@ -502,12 +378,7 @@ npm --version
 
 ```
 
-
-
-### Git (from project root)**
-
-
-
+### Git (from project root)
 ```powershell
 
 cd D:\ai-interview-agent
@@ -524,16 +395,8 @@ git log --oneline -5
 
 ```
 
-
-
-## Deployment**
-
-
-
-### Render backend**
-
-
-
+## Deployment
+### Render backend
 - Root directory: `backend`
 
 - Build command: `pip install -r requirements.txt`
@@ -544,12 +407,7 @@ git log --oneline -5
 
 - Configure CORS to allow the production Vercel origin.
 
-
-
-### Vercel frontend**
-
-
-
+### Vercel frontend
 - Root directory: `frontend`
 
 - Framework preset: Vite
@@ -558,38 +416,23 @@ git log --oneline -5
 
 - Redeploy after changing build-time environment variables.
 
-
-
-### Neon PostgreSQL**
-
-
-
+### Neon PostgreSQL
 Configure the database connection string in Render. Keep credentials private and consider using a migration tool such as Alembic as the schema evolves.
 
+## Troubleshooting
+- **`Failed to fetch`:**** Verify the backend is live, `VITE_API_BASE_URL` is correct, and FastAPI CORS allows the deployed frontend origin.
 
+- **Old API URL after deployment:**** Verify the Vercel environment variable and redeploy the frontend.
 
-## Troubleshooting**
+- **Refresh on a nested route returns 404:**** Check the Vercel SPA rewrite configuration.
 
+- **Database connection failure:**** Verify `DATABASE_URL`, SSL requirements, and `/health/database`.
 
+- **AI request failure:**** Verify `GROQ_API_KEY` and `GROQ_MODEL` in the backend environment and inspect Render logs.
 
-- **\*\*`Failed to fetch`:\*\*** Verify the backend is live, `VITE_API_BASE_URL` is correct, and FastAPI CORS allows the deployed frontend origin.
+- **PowerShell blocks virtual environment activation:**** If allowed by your machine's policy, run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` in the same terminal and activate again.
 
-- **\*\*Old API URL after deployment:\*\*** Verify the Vercel environment variable and redeploy the frontend.
-
-- **\*\*Refresh on a nested route returns 404:\*\*** Check the Vercel SPA rewrite configuration.
-
-- **\*\*Database connection failure:\*\*** Verify `DATABASE_URL`, SSL requirements, and `/health/database`.
-
-- **\*\*AI request failure:\*\*** Verify `GROQ_API_KEY` and `GROQ_MODEL` in the backend environment and inspect Render logs.
-
-- **\*\*PowerShell blocks virtual environment activation:\*\*** If allowed by your machine's policy, run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` in the same terminal and activate again.
-
-
-
-## Security Notes**
-
-
-
+## Security Notes
 - Never commit `.env`, API keys, JWT secrets, database passwords, or access tokens.
 
 - Use a long random production `SECRET_KEY` and separate development/production credentials.
@@ -600,10 +443,5 @@ Configure the database connection string in Render. Keep credentials private and
 
 - Rotate any credential that is accidentally exposed.
 
-
-
-## License**
-
-
-
+## License
 No license is specified here. Add a `LICENSE` file if you want to define how others may use, modify, and distribute this project.
